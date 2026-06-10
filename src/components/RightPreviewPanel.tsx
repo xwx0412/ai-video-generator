@@ -1,6 +1,6 @@
 "use client";
 
-import { Play, Download, Clock, CheckCircle, XCircle } from "lucide-react";
+import { Play, Clock, CheckCircle, XCircle } from "lucide-react";
 import { VideoRecord } from "@/types";
 
 interface RightPreviewPanelProps {
@@ -10,9 +10,9 @@ interface RightPreviewPanelProps {
 
 export function RightPreviewPanel({ history, onSelect }: RightPreviewPanelProps) {
   return (
-    <aside className="w-72 glass border-l border-white/5 flex flex-col overflow-hidden">
+    <aside className="w-[280px] flex-shrink-0 glass border-l border-white/5 flex flex-col overflow-hidden h-[calc(100vh-56px)]">
       <div className="p-4 border-b border-white/5">
-        <h3 className="text-white font-semibold text-sm">Recent</h3>
+        <h3 className="text-white font-semibold text-sm">Recent Generations</h3>
       </div>
 
       <div className="flex-1 overflow-y-auto p-3 space-y-2">
@@ -25,7 +25,7 @@ export function RightPreviewPanel({ history, onSelect }: RightPreviewPanelProps)
             <div
               key={record.id}
               onClick={() => onSelect(record)}
-              className="video-card glass-light rounded-xl p-3 cursor-pointer"
+              className="video-card glass-light rounded-xl p-3 cursor-pointer hover:bg-white/5 transition-all"
             >
               <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black/50 mb-2">
                 <video
@@ -34,7 +34,7 @@ export function RightPreviewPanel({ history, onSelect }: RightPreviewPanelProps)
                   preload="metadata"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity">
-                  <Play size={24} className="text-white" />
+                  <Play size={20} className="text-white" />
                 </div>
               </div>
 
