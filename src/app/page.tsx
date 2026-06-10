@@ -111,7 +111,7 @@ export default function VideoGeneratorPage() {
         <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
 
         <div className="flex-1 flex ml-[220px] transition-all duration-300">
-          <main className="flex-1 flex flex-col overflow-hidden">
+          <main className="flex-1 flex flex-col overflow-hidden min-w-0">
             <div className="flex-1 overflow-y-auto p-6">
               {activeTab === "generator" && (
                 <div className="max-w-3xl mx-auto">

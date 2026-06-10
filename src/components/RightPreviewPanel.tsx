@@ -10,7 +10,7 @@ interface RightPreviewPanelProps {
 
 export function RightPreviewPanel({ history, onSelect }: RightPreviewPanelProps) {
   return (
-    <aside className="w-[280px] flex-shrink-0 glass border-l border-white/5 flex flex-col overflow-hidden h-[calc(100vh-56px)]">
+    <aside className="w-[280px] flex-shrink-0 glass border-l border-white/5 flex flex-col overflow-hidden">
       <div className="p-4 border-b border-white/5">
         <h3 className="text-white font-semibold text-sm">Recent Generations</h3>
       </div>
